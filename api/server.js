@@ -60,15 +60,6 @@ app.get('/',function(req,res){
     res.sendFile(path.resolve('../client/views/login.html'));
 });
 
-app.get('/data',function(req,res){
-  //var user = db('users').find({email: 'henderson.briggs@geeknet.net'});
-   //console.log(user);
-
-
-
-
-});
-
 app.post('/login',function(req, res) {
    var email = req.body.email;
 

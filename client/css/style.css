@@ -1,0 +1,57 @@
+.box {
+  background-color: #1168a9;
+  margin: 0 auto 20px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center; }
+
+#loginImage {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center; }
+
+.container {
+  max-width: 800px;
+  margin: 0 auto; }
+
+.wrapper {
+  display: flex;
+  justify-content: center; }
+
+#userPic {
+  height: 125px;
+  width: 125px; }
+
+.logout {
+  font-size: 10px;
+  padding: 0;
+  margin: 0; }
+
+.subButton {
+  margin-top: 100px; }
+
+.balance {
+  float: right; }
+
+.first-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 40px; }
+
+.second-column {
+  display: flex;
+  flex-direction: column; }
+
+.third-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.edit-wrapper {
+  display: flex;
+  flex-direction: column; }
+
+.save {
+  margin-top: 30px; }

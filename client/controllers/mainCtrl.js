@@ -1,4 +1,4 @@
-angular.module('acme').controller('mainCtrl',mainCtrl);
+angular.module('acme').controller('mainCtrl', mainCtrl);
 
     mainCtrl.$inject=[
         '$scope',
@@ -9,7 +9,7 @@ angular.module('acme').controller('mainCtrl',mainCtrl);
         '$http'
     ];
 
-function mainCtrl($scope,$state, $rootScope,  $cookies, mainService, $http){
+function mainCtrl($scope, $state, $rootScope,  $cookies, mainService, $http) {
     $scope.first = null;
     $scope.address = null;
     $scope.phone = null;
@@ -28,17 +28,17 @@ function mainCtrl($scope,$state, $rootScope,  $cookies, mainService, $http){
     $scope.login = function(){
 
 
-        var payload ={email :$scope.email , password : $scope.password} ;
-        mainService.login('/login',payload).then(function(data){
+        var payload = { email :$scope.email , password : $scope.password } ;
+        mainService.login('/login', payload).then(function(data){
             if(data.errorMessage) {
                 $rootScope.errorBody = data;
             }
             else {
-                $http.get('/api/verify').then(function(res){
+                $http.get('/api/verify').then(function(res) {
                     if(data.error) {
                         $scope.errorBody = data;
                     }
-                    else{
+                    else {
                         $state.go(res.data.redirect);
                     }
                 })
@@ -61,6 +61,5 @@ function mainCtrl($scope,$state, $rootScope,  $cookies, mainService, $http){
         })
 
     }
-
 
 }
