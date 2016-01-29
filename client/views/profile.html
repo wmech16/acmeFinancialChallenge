@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+</head>
+<body>
+
+        <div class="logout">
+            <button class="btn btn-link" ng-click="logout()">Logout</button>
+        </div>
+
+
+<div class="container">
+        <form>
+            <div class="form-group row box">
+                <div id="centerACME" style="margin-left: 37%">
+                    <img class="imgACME" src="https://s3.amazonaws.com/upload.uxpin/files/102968/109980/uxpmod_197311_12088794_12083985493_hipsterlogogenerator_1412092528296.png">
+                    <br>
+                    <span>
+                        <strong id="textFinancial">Financial</strong>
+                    </span>
+
+                </div>
+
+            </div>
+
+            <div class="form-group row container">
+                <b>Welcome {{user.name.first}} {{user.name.last}}!</b>
+            </div>
+
+
+            <div class="form-group row container">
+
+                    <hr class="dotted" style="margin: -1%"/>
+
+            </div>
+
+            <div class="form-group row container">
+                <div class="offset3 span6"  style="margin-left: 38%" >
+                    <strong>Current Balance:</strong><br>
+                    <strong>{{user.balance}}</strong>
+                </div>
+            </div>
+
+            <div class="form-group row container">
+
+                    <hr class="dotted" style="margin: 0%"/>
+
+            </div>
+
+            <div class="form-group row container">
+                <div class="span5">
+                    <img src="{{user.picture}}" id="userPic">
+                </div>
+                <div class="span5">
+                    <div class="">
+                        <strong>Age:{{user.age}}</strong>
+                    </div>
+                    <div>
+                        <strong>Eye Color:{{user.eyeColor}}</strong>
+                    </div>
+                    <div>
+                        <strong>Company:{{user.company}}</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-group row container">
+                <strong>Email:{{user.email}} </strong>
+            </div>
+
+            <div class="form-group row container">
+                <strong>Phone:{{user.phone}} </strong>
+            </div>
+            <div class="form-group row container">
+                <strong>Address:{{user.address}} </strong>
+            </div>
+
+            <div class="form-group row container">
+                <div class="span12">
+                    <button type="submit" class="btn btn-primary btn-block profButton" ui-sref="edit">Edit Profile</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </form>
+
+    </div>
+
+</body>
+</html>
